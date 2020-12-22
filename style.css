@@ -105,8 +105,7 @@ body {
 
 /*Second SLide*/
 #second-slide {
-  margin-top: 00px;
-  height: 600px;
+  margin: 20px 20px;
 }
 
 #second-slide h1 {
@@ -121,21 +120,22 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: max-content;
-  padding: 0px 300px;
-  gap: 100px 300px;
   margin-top: 50px;
-  background-color: red;
+  width: 100%;
+  row-gap: 20px;
 }
 
 .feature-box {
   width: 300px;
   text-align: center;
   font-size: 18px;
+  width: 100%;
+  padding: 0px 250px;
 }
 
 /*third slide*/
 #third-slide {
-  height: 1024px;
+  margin: 20px 0px;
 }
 
 .third-slide-images {
@@ -161,7 +161,6 @@ body {
 
 .design-boxes {
   display: flex;
-  height: 1024px;
 }
 
 .design-box {
@@ -222,19 +221,17 @@ body {
 
 /*forth slide*/
 #forth-slide {
-  height: 724px;
+  margin: 20px 0px;
 }
 
 #forth-slide h1 {
   text-align: center;
-  margin-top: -100px;
 }
 
 .size-price {
   display: flex;
+  row-gap: 10px;
   justify-content: space-around;
-  margin: 100px;
-  margin-top: -25px;
 }
 
 .buy-size {
@@ -243,7 +240,7 @@ body {
   border-radius: 65px;
   text-align: center;
   padding: 80px 0px;
-  margin: 50px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 }
 
 .buy-size h2 {
@@ -252,7 +249,6 @@ body {
 
 .buy-size ul {
   text-align: left;
-  list-style: none;
   padding: 50px 120px;
   margin-top: -50px;
   height: 250px;
@@ -293,7 +289,7 @@ footer .payment-method > img {
 footer {
   display: flex;
   justify-content: space-around;
-  height: 250px;
+  height: fit-content;
   background-color: grey;
 }
 
@@ -304,4 +300,95 @@ footer h4 {
 
 .explore ul {
   list-style: none;
+}
+
+.sepration{
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  footer {
+    flex-direction: column;
+  }
+  .sepration {
+    display: block;
+  }
+  .design-box{
+    width: 70%;
+    height: 50%;
+    margin-left: 10%;
+    padding: 100px 5px;
+  }
+
+  .color{
+    height: 50px;
+  }
+  
+  .size {
+    width: 200px;
+  }
+
+  .bg-img img{
+    display: none;
+  }
+  
+  .nav-tabs{
+    display: none;
+  }
+
+  .header{
+    border-bottom: 1px solid black;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+
+  body{
+    overflow-y: visible;
+  }
+  .size-price {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .third-slide-images img{
+    display: none;
+  }
+
+  .design-boxes{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .color{
+    height: 55px;
+  }
+
+  .design-box{
+    border: 1px solid #000000;
+  }
+
+  .design{
+    height: fit-content;
+    padding: 0px;
+    width: 500px;
+  }
+
+  #second-slide .features {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feature-box{
+    padding: 20px;
+  }
+
+  .nav-tabs{
+    width: 490px;
+  }
 }
